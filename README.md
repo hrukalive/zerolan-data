@@ -1,6 +1,6 @@
 # ZerolanData
 
-![Static Badge](https://img.shields.io/badge/Python-3.1x-blue) ![Static Badge](https://img.shields.io/badge/License-MIT-orange) ![Static Badge](https://img.shields.io/badge/ver-1.5.0-green)
+![Static Badge](https://img.shields.io/badge/Python-3.1x-blue) ![Static Badge](https://img.shields.io/badge/License-MIT-orange) ![Static Badge](https://img.shields.io/badge/ver-1.6.0-green)
 
 Define data classes used in [**ZerolanLiveRobot**](https://github.com/AkagawaTsurunaki/ZerolanLiveRobot) and [**ZerolanCore**](https://github.com/AkagawaTsurunaki/zerolan-core).
 
@@ -44,6 +44,5 @@ src
 Run the following commands:
 
 ```shell
-cd src/zerolan/data/generator
-python doc_gen.py
+python ./docs/scripts/doc_gen.py
 ```
