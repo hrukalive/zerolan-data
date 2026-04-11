@@ -24,6 +24,7 @@ src
       ├─ pipeline
       │  ├─ abs_data.py     # Abstract pipeline query and prediction
       │  ├─ asr.py          # Automatic speech recognition
+      │  ├─ defense.py      # Defense model
       │  ├─ img_cap.py      # Image capitioning
       │  ├─ llm.py          # Large language model
       │  ├─ milvus.py       # Vector database (Milvus)
