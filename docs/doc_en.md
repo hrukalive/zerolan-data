@@ -1,6 +1,6 @@
 # Zerolan Data Documentation
 
-Generated from the project `zerolan.data` by **AkagawaTsurunaki** at `2025-06-24T17:32:45.146437`.
+Generated from the project `zerolan.data` by **AkagawaTsurunaki** at `2026-04-11T10:34:42.457314`.
 
 ## zerolan.data.data
 
@@ -247,6 +247,43 @@ Generated from the project `zerolan.data` by **AkagawaTsurunaki** at `2025-06-24
 |`role`|`<class 'str'>`|The role of this conversation. See `RoleEnum`.|
 |`content`|`<class 'str'>`|The content of this conversation.|
 |`metadata`|`str \| None`|The metadata of this conversation.|
+
+
+### DefenseConversation
+
+*In module `zerolan.data.pipeline.llm`*.
+
+
+    Defense models are categorized into 3 types based on their input-output orientation:
+    **Input-Level Defense**, **Output-Level Defense**, and **Unified Input-Output Safeguards**.
+
+    Consequently, the detection results should be oriented toward each **Conversation**—specifically,
+    determining whether the conversation contains injection content and providing a confidence score for this judgment.
+
+    When utilizing any of these defense models, please encapsulate the processing using **DefenseConversation**.
+    The handling logic should branch based on whether the defense model is enabled or not.
+    
+
+| Field Name | Type | Description|
+|--|--|--|
+|`role`|`<class 'str'>`|The role of this conversation. See `RoleEnum`.|
+|`content`|`<class 'str'>`|The content of this conversation.|
+|`metadata`|`str \| None`|The metadata of this conversation.|
+|`defense`|`<class 'zerolan.data.pipeline.llm.DefenseInfo'>`|The detection results from the defense model.|
+
+
+### DefenseInfo
+
+*In module `zerolan.data.pipeline.llm`*.
+
+
+    The detection results from the defense model.
+    
+
+| Field Name | Type | Description|
+|--|--|--|
+|`label`|`typing.Literal['safe', 'injection']`|`safe` indicates the text is free from injection risks, while `injection` indicates the text contains injection risks.|
+|`score`|`<class 'float'>`|The score (0.0~1.0) represents the confidence level of this determination.|
 
 
 ### LLMPrediction
