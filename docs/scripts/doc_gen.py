@@ -102,6 +102,6 @@ if __name__ == "__main__":
     doc_gen(
         package_name="zerolan.data",
         author="AkagawaTsurunaki",
-        file="../../../../docs/doc_en.md"
+        file="./docs/doc_en.md"
     )
     print("Done.")
